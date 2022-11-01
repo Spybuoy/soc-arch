@@ -1,5 +1,5 @@
 //overall part
-#define CHUNK_NUMBER 1024
+#define CHUNK_NUMBER 4096
 //CDC part
 #define WIN_SIZE 12
 #define PRIME 3
@@ -11,6 +11,9 @@
 #define CODE_LENGTH (13)
 
 
+
+
 void CDC(unsigned char * Input_add,int file_length,unsigned int * chunk_add,unsigned int * chunk_len);
-void SHA(unsigned char * Input_add,unsigned int * chunk_add_old,unsigned int * chunk_len_old,unsigned int * chunk_add_new,unsigned int * chunk_len_new,char* SHA);
-int FIND_CHUNK(unsigned char * Input_add,unsigned int * chunk_add_new,unsigned int * chunk_len_new,char* SHA,unsigned char * Output_add);
+void SHA(unsigned char * Input_add,unsigned int * chunk_add_old,unsigned int * chunk_len_old,unsigned int * chunk_add_new,unsigned int * chunk_len_new,char* SHAar);
+int FIND_CHUNK(unsigned char * Input_add,unsigned int * chunk_add_new,unsigned int * chunk_len_new,char* SHAar,unsigned char * Output_add);
+int LZW(unsigned char * Input_add,unsigned char * Output_add,int length);
